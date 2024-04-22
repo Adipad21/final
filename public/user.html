@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+            Author: Aditya Padala
+        -->
+        <title>Elite Cricket Academy: Login/Register</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body id="login-page">
+        <header id="main-header">
+            <div id="main-title">
+                <div id="image"><a href="index.html"><img src="images/logo.jpg" width="80" height="80"></a></div>
+                <div id="title"><h1><a href="index.html">Elite Cricket Academy</a></h1></div>
+            </div>
+            <div id="nav">       
+                <nav id="main-nav"> 
+                    <div id="container">
+                        <div class="menu"><p>MENU</p></div>
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <ul id="columns">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="training.html">Training Program</a></li>
+                        <li><a href="schedule.html">Schedule & Events</a></li>
+                        <li><a href="coach.html">Our Coaches</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a class="highlight" href="user.html">Users</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main id="main-content">
+            <div id="subject">
+                <div class="content">
+                    <div id ="users">
+                        <h2>Users List</h2>
+                        <ul id="profileList"></ul>
+                    </div>
+                    <p>Add a user? <a href="#" id="register-link">Register</a></p>
+
+                    <div id="register" class="login hidden">
+                        <form id="form-register">
+                            <input type="hidden" id="user_id" name="user_id">
+
+                            <label for="first_name"><strong>First Name</strong></label><br>
+                            <input type="text" id="first_name" name="first_name" required minlength="3"><br>
+                            
+                            <label for="last_name"><strong>Last Name</strong></label><br>
+                            <input type="text" id="last_name" name="last_name" required minlength="3"><br>
+                            
+                            <label for="dob"><strong>Date of Birth</strong></label><br>
+                            <input type="date" id="dob" name="dob" required><br>
+                        
+                            <label for="batting_style"><strong>Batting Style:</strong></label><br>
+                            <select id="batting_style" name="batting_style">
+                                <option value="Right-handed">Right-handed</option>
+                                <option value="Left-handed">Left-handed</option>
+                            </select><br>
+    
+                            <label for="bowling_style"><strong>Bowling Style:</strong></label><br>
+                            <select id="bowling_style" name="bowling_style">
+                                <option value="Right-arm fast">Right-arm fast</option>
+                                <option value="Right-arm medium">Right-arm medium</option>
+                                <option value="Right-arm spin">Right-arm spin</option>
+                                <option value="Left-arm fast">Left-arm fast</option>
+                                <option value="Left-arm medium">Left-arm medium</option>
+                                <option value="Left-arm spin">Left-arm spin</option>
+                            </select>
+                            <br>
+    
+                            <label for="primary_role"><strong>Primary Role:</strong></label><br>
+                            <select id="primary_role" name="primary_role">
+                                <option value="Batsman">Batsman</option>
+                                <option value="Bowler">Bowler</option>
+                                <option value="Wicket-keeper">Wicket-keeper</option>
+                                <option value="All-rounder">All-rounder</option>
+                            </select>
+                            <br>
+
+                            <label for="email"><strong>Email</strong></label><br>
+                            <input type="email" id="email" name="email" required><br>
+                                
+
+                            <button type="submit" id="submit">Submit</button> 
+                        </form>
+                    </div>
+                    <div id="error"></div>
+                    <div id="result"></div>
+                </div>
+            </div>
+        </main>
+    
+        <footer id="main-footer">
+            <p>Copyright © Elite Cricket Academy</p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="newProfile.js"></script>
+        <script src="editProfile.js"></script>
+    </body>
+</html>

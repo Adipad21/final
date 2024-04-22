@@ -1,0 +1,491 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin:0;
+    background:#F2A649;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Structure */
+#main-header,#main-footer{
+    color: #000000;
+    text-align: center;
+    padding:2px;
+    justify-content: center;
+}
+#main-title{
+    height:120px;
+    display:flex;
+    background: #081130;
+    align-items: center;
+    margin-bottom: 5px;
+    margin-top: -2px;
+    margin-right: -2px;
+    margin-left: -2px;
+    justify-content: center;
+}
+#main-header a{
+    text-decoration: none;
+    color:#F2A649;
+}
+#title{
+    width:80%;
+}
+#title a, #main-footer{
+    color: #F2A649;
+}
+#image img{
+    vertical-align: middle;
+    border: 2px solid white;
+}
+#container {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #000000;
+    position: relative;
+    border-radius: 8px;
+}
+.menu{
+    font-size: 10px;
+    text-align: center;
+    margin:-6px;
+}
+.bar1, .bar2, .bar3 {
+    width: 25px;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 2px;
+    margin: 4px 7px;
+}
+/* Main */
+#main-nav {
+    text-align: start;
+    width:90%;
+    margin:auto;
+}
+#main-nav a{
+    text-decoration: none;
+    color: #F2A649;
+    padding:1px 5px;
+    font-size: 16px;
+}
+#main-nav li{
+    background: #121D40;
+    border:1px solid black;
+    padding: 5px 0px;
+}
+#main-nav ul{
+    margin:auto;
+    list-style-type: none;
+    padding-left: 0px;
+    padding-top:2px;
+}
+#main-nav a:hover{
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    padding-bottom:1px;
+}
+#main-nav #columns,#main-content #subject{
+    margin:auto;
+}
+#subject{
+    padding-top:15px;
+}
+#main-nav #columns{
+    margin:auto;
+    display:none;
+}
+#main-nav #columns.active {
+    display: block;
+}
+#main-content{
+    margin:auto 0px;
+}
+#subject{
+    width:90%;
+    text-align: center;
+    flex-direction: row;
+    padding-bottom: 40px;
+}
+.content,.box{
+    background:#121D40;
+    color:#F2A649;
+    border-radius: 20px;
+}
+#subject .content{
+    flex:33%;
+    padding: 5px 2%;
+    margin-bottom: 20px;
+} 
+#subject .split{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap:20px;
+}
+.box {
+    font-size: 12px;
+    padding-bottom:20px;
+}
+.split a{
+    text-decoration: none;
+    color:#F2A649;
+}
+#schedule-page .content{
+    margin-bottom:40px;
+}
+
+.login-page .content{
+    padding-bottom: 40px;
+}
+.login{
+    width:fit-content;
+    background:lightgray;
+    padding: 2px 15px;
+    font-size: 14px;
+    border-radius: 10px;
+    margin:auto;
+}
+.content p, .login p{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 8px;
+}
+#home-page .content p,#training-page .content p, #schedule-page .content p{
+    text-align:justify;
+}
+.event-list{
+    padding-bottom: 20px;
+}
+#email h3,#password h3{
+    margin-bottom: 0;
+    text-align: start;
+    font-size: 14px;
+    color:black;
+}
+#register{
+    text-align:start;
+    font-size: 14px;
+    color:black;
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+
+#register input, #register select{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.layout{
+    width:80%;
+    margin:auto;
+}
+.main-address{
+    background:#ffffff;
+    border-radius: 20px;
+    padding: 5px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.contact-us{
+    background:#ffffff;
+    color:#000;
+    text-align: start;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin:auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    max-width: fit-content;
+}
+#contact-form input, #contact-form textarea{
+    margin-bottom: 10px;
+    max-width: 100%;
+}
+#contact-page h3{
+    margin:auto;
+    padding-top: 5px;
+}
+.two{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    gap:20px;
+    margin:auto;
+}
+.two iframe{
+    max-width: 100%;
+    max-height: 100%;
+}
+.address{
+    background: #ffffff;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.button{
+    margin-bottom: 8px;
+}
+#gallery-page #images img{
+    max-width: 100%;
+    max-height: 100%;
+    justify-content: center;
+    border-radius: 10px;
+}
+#images{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+#three{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:2%;
+}
+#three div{
+    flex:30%;
+    margin-bottom: 20px;
+}
+#coach{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.coach-split{
+    align-items: center;
+    margin:auto;
+}
+.coach-name h3{
+    font-size: 18px;
+    margin-top:0;
+    margin-bottom: 0;
+}
+.coach-name p{
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: justify;
+}
+.content iframe{
+    margin-bottom: 20px;
+}
+#main-footer{
+    margin-top:auto;
+    background: #081130;
+    font-size: 12px;
+}
+.event-list h4,.event-list p{
+    margin:auto;
+    width: fit-content;
+}
+#home-page .content p,#training-page .content p,#coach-page .content p{
+    font-size: 14px;
+}
+#three img{
+    width:150px;
+    height: 150px;
+}
+#schedule-page iframe{
+    max-width: 90%;
+    max-height: 90%;
+    padding-bottom: 20px;
+}
+iframe{
+    border-radius: 10px;
+    padding:1px;
+}
+
+p{
+    color:white;
+}
+#contact-page p, .menu p{
+    color:black;
+}
+#main-footer p{
+    color: #F2A649;
+}
+h5{
+    font-size: 18px;
+    margin-bottom: auto;
+}
+
+.match {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.match img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.team-plans {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap:20px;
+    padding-top: 10px;
+}
+
+.match h3 {
+    margin: 5px;
+    text-align: center;
+}
+
+.match p {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.match h2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin:auto;
+}
+.match h4 {
+    margin: 5px;
+    font-size: 18px;
+}
+#submit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+}
+.hidden{
+    display: none;
+}
+.contact-form {
+    background-color: #000000;
+}
+#profileList {
+    list-style-type: none; 
+    padding: 0;
+    margin: 20px 0;
+    font-size: 14px;
+}
+#profileList li {
+    background-color: #D4EDDA; 
+    color:#000; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    border-radius: 10px; 
+}
+#result p{
+    color: #000;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #D4EDDA;
+}
+#sent p{
+    color: #000;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+#error p{
+    color: red;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: #dd8d8d;
+    font-weight: bold;
+}
+
+#edit-link {
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+  
+#delete-link {
+    float: right;
+    cursor: pointer;
+    z-index: 2;
+    font-weight: bold;
+}
+
+
+@media only screen and (min-width: 950px){
+    #main-nav ul{
+        width:95%;
+    }
+    #subject{
+        width:85%;
+        padding-top:none;
+    }
+    #main-nav #columns,#main-content #subject{
+    display:flex;
+    justify-content:space-around;
+    margin:auto;
+    padding-bottom: 50px;
+    }
+    #main-nav li{
+        background: none;
+        border: none;
+        padding: 5px 0px;
+    }
+    #main-nav a{
+        color:#121D40;
+    }
+    #subject .content{
+        margin-bottom:0px;
+    }
+    #event{
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+    }
+    .split{
+        margin-left:5%;
+    }
+    .two{
+        flex-direction: row;
+    }
+    .coach-split{
+        display: flex;
+        justify-content: center;
+        gap:20px;
+        align-items: center;
+    }
+    .coach-name h3{
+        text-align: start;
+        color:#F2A649;
+    }
+    #main-nav .highlight{
+        border-bottom: 2px solid #121D40;
+        color: #121D40;
+    }
+    #container{
+        display:none;
+    }
+    .attach {
+        display:flex;
+        justify-content: center;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+    }
+    .attach > * {
+        flex: 1 1 0; /* flex-grow, flex-shrink, flex-basis */
+    }
+    
+}
