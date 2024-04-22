@@ -11,27 +11,18 @@ const checkDOB = (dob) => {
 
 // Function to delete a user
 const deleteUser = async (user) => {
-    // Display confirmation prompt
-    const confirmDelete = window.confirm("Are you sure you want to delete this user?");
-
-    if (confirmDelete) {
-        let response = await fetch(`/api/users/${user._id}`, {
+    if (window.confirm("Are you sure you want to delete this user?")) {
+        const response = await fetch(`/api/users/${user._id}`, {
             method: "DELETE",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
+            headers: {"Content-Type": "application/json;charset=utf-8"},
         });
-
         if (response.status != 200) {
             console.log("Error deleting");
             return;
         }
-
-        // Reload the page to refresh the user
         window.location.reload();
     }
 };
-
 
 const fetchUsers = async () => {
     try {

@@ -1,18 +1,3 @@
-// Function to delete a user
-const deleteUser = async (user) => {
-    if (window.confirm("Are you sure you want to delete this user?")) {
-        const response = await fetch(`/api/users/${user._id}`, {
-            method: "DELETE",
-            headers: {"Content-Type": "application/json;charset=utf-8"},
-        });
-        if (response.status != 200) {
-            console.log("Error deleting");
-            return;
-        }
-        window.location.reload();
-    }
-};
-
 const fetchAllUsers = async () => {
     try {
         const response = await fetch("/api/users");
@@ -66,6 +51,7 @@ const fetchAllUsers = async () => {
             li.appendChild(document.createElement("br"));
 
             profileList.appendChild(li);
+
         });
     } catch (error) {
         console.error("Failed to fetch users:", error);
